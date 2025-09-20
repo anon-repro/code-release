@@ -3,6 +3,7 @@
 This repository provides the anonymous implementation of our method (SSD).  
 It includes training, inference, and evaluation scripts to reproduce the main results.  
 All author-identifying information has been removed in accordance with the double-blind policy.
+
 SSD is a geometry-aware generative framework for 3D molecular conformations, replacing Gaussian priors with dataset-adaptive spherical shells and structured dynamics.
 
 ---

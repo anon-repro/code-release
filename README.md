@@ -11,7 +11,7 @@ SSD is a geometry-aware generative framework for 3D molecular conformations, rep
 ## Overview
 
 <p align="center">
-  <img src="ssd_overview.png" width="800">
+  <img src="overview.png" width="800">
 </p>
 
 **Key contributions of SSD:**
@@ -22,10 +22,13 @@ SSD is a geometry-aware generative framework for 3D molecular conformations, rep
 ---
 
 ## Quick Start (Reproduce Results)
+We provide inference scripts to directly reproduce the results across different evaluation protocols as reported in the paper:
 
-We provide inference scripts to directly reproduce the main quantitative results:  
-- Table 3 Results on QM9 and Drugs datasets for conditional generation.
-- Table 4 Results on QM9 and Drugs datasets for unconditional refinement.
+- **Table 3 (Conditional Generation):**
+  - **SubGDiff Protocol**: Benchmarking against GeoDiff and SubGDiff.
+  - **MCF Protocol**: Benchmarking against the original MCF implementation.
+- **Table 3 (Unconditional Refinement):**
+  - **SemlaFlow Protocol**: Benchmarking against EDM and SemlaFlow.
 
 ```bash
 # Create environment
@@ -66,6 +69,8 @@ python train.py ./configs/drugs_uncondition.yml
 ## Inference / Generation
 
 **Conditional generation on QM9:**
+1. SubGDiff Protocol
+Used for benchmarking against GeoDiff and SubGDiff.
 
 ```bash
 python test_condition.py \
@@ -80,6 +85,11 @@ python test_condition.py \
   --clip 1000 \
   --clip_local 20 \
   --global_start_sigma 5
+```
+
+2. MCF Protocol
+```bash
+python test_mcf.py --task_config configs/test_qm9.yaml
 ```
 
 **Unconditional generation on QM9:**

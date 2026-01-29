@@ -41,7 +41,7 @@ conda activate ssd
 ---
 
 ## Resources
-The dataset and checkpoints are available [here](https://zenodo.org/records/17149438).
+The dataset and checkpoints are available [here](https://zenodo.org/records/18398184).
 
 ---
 
